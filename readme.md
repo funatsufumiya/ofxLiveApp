@@ -14,6 +14,11 @@ The main idea is that you run the application, make changes and save the source 
           ```
           gem install xcpretty  
           ```
+          - Run in the project directory for the first time (and each time the project structure changes):
+          ```
+          xcodebuild -project PROJECT_NAME.xcodeproj | xcpretty -r json-compilation-database --output compile_commands.json
+          ```
+          Change PROJECT_NAME to the name of your project
 	* **WIN**:
 		- Add props file from addon to your project (via the "Property Manager" window in Visual Studio)
 
